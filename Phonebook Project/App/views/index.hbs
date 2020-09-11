@@ -1,0 +1,36 @@
+<div class="wrapper">
+    <h1>Phonebook</h1>
+
+    <div class="button-holder">
+        <a type="button" href="/create" class="button"><i class="fas fa-user-plus"></i>New Entry</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="mountaineer-label">Name</div>
+            <div class="mountaineer-label">Telephone</div>
+            <div class="mountaineer-label">Last Seen Date</div>
+            <div class="actions-label">Actions</div>
+        </div>
+        <div class="main">
+            {{#each mountaineers}}
+                <div class="mountaineer">
+                    <div class="mountaineer-item">
+                        {{name}}
+                    </div>
+                    <div class="mountaineer-item">
+                        {{age}}
+                    </div>
+                    <div class="mountaineer-item">
+                        {{lastSeenDate}}
+                    </div>
+                    <div class="mountaineer-item mountaineer-actions">
+                        <a type="button" href="/edit/{{_id}}" class="mountaineerbutton"><i class="fas fa-user-edit"></i>Edit</a>
+                        <a type="button" href="/delete/{{_id}}" class="mountaineerbutton"><i class="fas fa-trash-alt"></i>Remove</a>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<script src="https://kit.fontawesome.com/138bf39034.js" crossorigin="anonymous"></script>
