@@ -1,2 +1,2 @@
 # Applications
- Basic Web Applications developed with JavaScript, HTML, CSS, Mongo DB & Mongoose ORM
+ Simple Web Applications developed with **JavaScript**, **HTML**, **CSS**, **MongoDB** & **Mongoose ORM**
