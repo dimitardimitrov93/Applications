@@ -1,26 +1,26 @@
 <div class="wrapper">
-    <form class="entry-create" action="/delete/{{mountaineer._id}}" method="post">
+    <form class="entry-create" action="/delete/{{contact._id}}" method="post">
         <div class="create-header">
-            Remove Mountaineer
+            Delete Contact
         </div>
         <div class="create-entryitem">
             <div class="create-entryitem-label">Name</div>
-            <input type="text" class="create-entryitem-content" name="name" value="{{mountaineer.name}}"
-                   required disabled/>
+            <input type="text" class="create-entryitem-content" name="name" value="{{contact.name}}" required
+                disabled />
         </div>
         <div class="create-entryitem">
             <div class="create-entryitem-label">Telephone</div>
-            <input type="number" class="create-entryitem-content" name="telephoneNumber" value="{{mountaineer.telephoneNumber}}"
-                   required disabled/>
+            <input type="number" class="create-entryitem-content" name="telephoneNumber"
+                value="{{contact.telephoneNumber}}" required disabled />
         </div>
-            <div class="create-entryitem">
+        <div class="create-entryitem">
             <div class="create-entryitem-label">Email Address</div>
-            <input type="number" class="create-entryitem-content" name="emailAddress" value="{{mountaineer.emailAddress}}"
-                   required disabled/>
+            <input type="number" class="create-entryitem-content" name="emailAddress" value="{{contact.emailAddress}}"
+                required disabled />
         </div>
 
         <div class="create-button-holder">
-            <button type="submit" class="button">Delete Contact</button>
+            <button type="submit" class="button">Delete</button>
             <a type="button" href="/" class="button">Back</a>
         </div>
     </form>

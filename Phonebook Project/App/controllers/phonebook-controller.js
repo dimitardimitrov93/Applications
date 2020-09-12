@@ -2,69 +2,70 @@ const Phonebook = require('../models/phonebook-entry');
 
 module.exports = {
     getIndex: function (req, res) {
-        getAll().then((mountaineers) => {
-            return res.render('index', {mountaineers});
+        getAll().then((contacts) => {
+            return res.render('index', {contacts});
         });
     },
     getCreate: function (req, res) {
         return res.render('create');
     },
     postCreate: function (req, res) {
-        let mountaineerInfo = req.body;
-        addMountaineer(mountaineerInfo).then(() => {
+        let contactInfo = req.body;
+        addContact(contactInfo).then(() => {
             return res.redirect('/');
         })
     },
     getEdit: function (req, res) {
         let id = req.params.id;
-        findByID(id).then((mountaineer) => {
-            return res.render('edit', {mountaineer});
+        findByID(id).then((contact) => {
+            return res.render('edit', {contact});
         });
     },
     postEdit: function (req, res) {
         let id = req.params.id;
-        let newMountaneerInfo = req.body;
-        editMountaineerInfo(id, newMountaneerInfo).then(() => {
+        let newContactInfo = req.body;
+        editContactInfo(id, newContactInfo).then(() => {
             return res.redirect('/');
         });
     },
     getDelete: function (req, res) {
         let id = req.params.id;
-        findByID(id).then((mountaineer) => {
-            return res.render('delete', {mountaineer});
+        findByID(id).then((contact) => {
+            return res.render('delete', {contact});
         });
     },
     postDelete: function (req, res) {
         let id = req.params.id;
-        deleteMountaineer(id).then(() => {
+        deleteContact(id).then(() => {
             return res.redirect('/');
         });
     },
     searchEntries: function(req, res) {
         let searchItem = req.body.searchItem;
         searchEntries(searchItem).then((result) => {
+            // console.log(result);
             return res.render('index', {result});
         });
-    }
+    },
 };
 
 function getAll() {
     return Phonebook.find({});
 }
 
-function addMountaineer(mountaineerInfo) {
-    return Phonebook.create(mountaineerInfo);
+function addContact(contactInfo) {
+    return Phonebook.create(contactInfo);
 }
 
 function findByID(id) {
     return Phonebook.findById(id);
 }
 
-function editMountaineerInfo(id, newMountaneerInfo) {
-    return Phonebook.findByIdAndUpdate(id, newMountaneerInfo);
+function editContactInfo(id, newContactInfo) {
+    return Phonebook.findByIdAndUpdate(id, newContactInfo);
 }
 
-function deleteMountaineer(id) {
+function deleteContact(id) {
     return Phonebook.findByIdAndRemove(id);
 }
 

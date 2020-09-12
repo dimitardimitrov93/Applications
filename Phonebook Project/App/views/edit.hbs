@@ -1,27 +1,26 @@
 <div class="wrapper">
-    <form class="entry-create" action="/edit/{{mountaineer._id}}" method="post">
+    <form class="entry-create" action="/edit/{{contact._id}}" method="post">
         <div class="create-header">
-            Edit Entry
+            Edit Contact
         </div>
         <div class="create-entryitem">
             <div class="create-entryitem-label">Name</div>
-            <input type="text" class="create-entryitem-content" name="name" value="{{mountaineer.name}}"
-                   required/>
+            <input type="text" class="create-entryitem-content" name="name" value="{{contact.name}}" required />
         </div>
         <div class="create-entryitem">
             <div class="create-entryitem-label">Telephone</div>
-            <input type="number" class="create-entryitem-content" name="telephoneNumber" value="{{mountaineer.telephoneNumber}}"
-                   required/>
+            <input type="number" class="create-entryitem-content" name="telephoneNumber"
+                value="{{contact.telephoneNumber}}" required />
         </div>
 
         <div class="create-entryitem">
             <div class="create-entryitem-label">Email Address</div>
-            <input type="email" class="create-entryitem-content" name="emailAddress"
-                   value="{{mountaineer.emailAddress}}" required/>
+            <input type="email" class="create-entryitem-content" name="emailAddress" value="{{contact.emailAddress}}"
+                required />
         </div>
 
         <div class="create-button-holder">
-            <button type="submit" class="button">Edit Contact</button>
+            <button type="submit" class="button">Edit</button>
             <a type="button" href="/" class="button">Back</a>
         </div>
     </form>

@@ -2,7 +2,7 @@
     <h1>Phonebook</h1>
 
     <div class="button-holder">
-        <a type="button" href="/create" class="button"><i class="fas fa-user-plus"></i>New Entry</a>
+        <a type="button" href="/create" class="button"><i class="fas fa-user-plus"></i>New Contact</a>
     </div>
 
     <form action="/search" method="POST">
@@ -15,27 +15,27 @@
 
     <div class="content">
         <div class="header">
-            <div class="mountaineer-label">Name</div>
-            <div class="mountaineer-label">Telephone</div>
-            <div class="mountaineer-label">Email Address</div>
+            <div class="contact-label">Name</div>
+            <div class="contact-label">Telephone</div>
+            <div class="contact-label">Email Address</div>
             <div class="actions-label">Actions</div>
         </div>
         <div class="main">
-            {{#each mountaineers}}
-            <div class="mountaineer">
-                <div class="mountaineer-item">
+            {{#each contacts}}
+            <div class="contact">
+                <div class="contact-item">
                     {{name}}
                 </div>
-                <div class="mountaineer-item">
+                <div class="contact-item">
                     {{telephoneNumber}}
                 </div>
-                <div class="mountaineer-item">
+                <div class="contact-item">
                     {{emailAddress}}
                 </div>
-                <div class="mountaineer-item mountaineer-actions">
-                    <a type="button" href="/edit/{{_id}}" class="mountaineerbutton"><i
+                <div class="contact-item contact-actions">
+                    <a type="button" href="/edit/{{_id}}" class="contactbutton"><i
                             class="fas fa-user-edit"></i>Edit</a>
-                    <a type="button" href="/delete/{{_id}}" class="mountaineerbutton"><i
+                    <a type="button" href="/delete/{{_id}}" class="contactbutton"><i
                             class="fas fa-trash-alt"></i>Remove</a>
                 </div>
             </div>

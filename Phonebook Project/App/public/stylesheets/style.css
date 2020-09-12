@@ -49,9 +49,11 @@ body {
     text-decoration: none;
     text-shadow: 0px 1px 0px #F0F5FC;
     font-weight: bold;
+    transition: all .2s ease-in-out;
+    transform: scale(1.05);
 }
 
-.mountaineerbutton {
+.contactbutton {
     border-radius: 6px;
     border: 3px solid #F0F5FC;
     display: inline-block;
@@ -63,7 +65,7 @@ body {
     font-weight: bold;
 }
 
-.mountaineerbutton:hover {
+.contactbutton:hover {
     text-decoration: underline;
 }
 
@@ -100,7 +102,7 @@ body > div > div.button-holder > a > i {
     padding-right: 0.8em;
 }
 
-body > div > div.content > div.main > div > div.mountaineer-item.mountaineer-actions > a > i {
+body > div > div.content > div.main > div > div.contact-item.contact-actions > a > i {
     padding-right: 0.3em;
 }
 
@@ -155,7 +157,7 @@ body > div > div.content > div.main > div > div.mountaineer-item.mountaineer-act
     border-bottom: 4px solid white;
 }
 
-.main .mountaineer {
+.main .contact {
     color: white;
     font-weight: 300;
 
@@ -176,7 +178,7 @@ body > div > div.content > div.main > div > div.mountaineer-item.mountaineer-act
     margin-left: 2%;
 }
 
-.wrapper .content .header .mountaineer-label {
+.wrapper .content .header .contact-label {
     width: 20%;
 }
 
@@ -185,26 +187,26 @@ body > div > div.content > div.main > div > div.mountaineer-item.mountaineer-act
     text-align: center;
 }
 
-.wrapper .content .main .mountaineer {
+.wrapper .content .main .contact {
     display: block;
     width: 100%;
 }
 
-.wrapper .content .main .mountaineer > * {
+.wrapper .content .main .contact > * {
     display: inline-block;
     font-size: 1.5em;
     padding: 1%;
     margin-left: 2%;
 }
 
-.wrapper .content .main .mountaineer .mountaineer-title {
+.wrapper .content .main .contact .contact-title {
     width: 20%;
 }
 
-.wrapper .content .main .mountaineer .mountaineer-item {
+.wrapper .content .main .contact .contact-item {
     width: 20%;
 }
 
-.wrapper .content .main .mountaineer .mountaineer-actions {
+.wrapper .content .main .contact .contact-actions {
     text-align: center;
 }
