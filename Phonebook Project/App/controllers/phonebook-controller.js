@@ -1,4 +1,4 @@
-const Mountaineer = require('../models/phonebook-entry');
+const Phonebook = require('../models/phonebook-entry');
 
 module.exports = {
     getIndex: function (req, res) {
@@ -38,26 +38,36 @@ module.exports = {
         let id = req.params.id;
         deleteMountaineer(id).then(() => {
             return res.redirect('/');
-        })
+        });
+    },
+    searchEntries: function(req, res) {
+        let searchItem = req.body.searchItem;
+        searchEntries(searchItem).then((result) => {
+            return res.render('index', {result});
+        });
     }
 };
 
 function getAll() {
-    return Mountaineer.find({});
+    return Phonebook.find({});
 }
 
 function addMountaineer(mountaineerInfo) {
-    return Mountaineer.create(mountaineerInfo);
+    return Phonebook.create(mountaineerInfo);
 }
 
 function findByID(id) {
-    return Mountaineer.findById(id);
+    return Phonebook.findById(id);
 }
 
 function editMountaineerInfo(id, newMountaneerInfo) {
-    return Mountaineer.findByIdAndUpdate(id, newMountaneerInfo);
+    return Phonebook.findByIdAndUpdate(id, newMountaneerInfo);
 }
 
 function deleteMountaineer(id) {
-    return Mountaineer.findByIdAndRemove(id);
+    return Phonebook.findByIdAndRemove(id);
+}
+
+function searchEntries(searchItem) {
+    return Phonebook.find({searchItem});
 }

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mountaineerSchema = new mongoose.Schema({
+const phonebookEntrySchema = new mongoose.Schema({
     id: {
         type: mongoose.Schema.Types.ObjectId
     },
@@ -8,19 +8,15 @@ const mountaineerSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.String,
         required: true,
     },
-    age: {
-        type: mongoose.Schema.Types.Number,
-        required: true,
-    },
-    gender: {
+    telephoneNumber: {
         type: mongoose.Schema.Types.String,
         required: true,
     },
-    lastSeenDate: {
+    emailAddress: {
         type: mongoose.Schema.Types.String,
         required: true,
     }
 });
 
-const Mountaineer = mongoose.model('Mountaineer', mountaineerSchema);
-module.exports = Mountaineer;
+const Phonebook = mongoose.model('Phonebook', phonebookEntrySchema);
+module.exports = Phonebook;

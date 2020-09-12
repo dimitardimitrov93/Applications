@@ -115,6 +115,24 @@ body > div > div.content > div.main > div > div.mountaineer-item.mountaineer-act
     outline: none;
 }
 
+.searchBox {
+    display: none;
+}
+
+.searchBox input {
+    display: block;
+    margin: 0 auto;
+    padding-left: 3.5em;
+    height: 4.5em;
+}
+
+.searchBox > i {
+    position: absolute;
+    top: 36.5%;
+    left: 42%;
+    color: #6e6c6c;
+}
+
 .content {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;

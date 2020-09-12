@@ -8,4 +8,5 @@ module.exports = (app) => {
   app.post('/edit/:id', controller.postEdit);
   app.get('/delete/:id', controller.getDelete);
   app.post('/delete/:id', controller.postDelete);
+  app.post('/search', controller.searchEntries);
 };

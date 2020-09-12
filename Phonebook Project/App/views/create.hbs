@@ -1,36 +1,23 @@
 <div class="wrapper">
-    <form class="mountaineer-create" action="/create" method="post">
+    <form class="entry-create" action="/create" method="post">
         <div class="create-header">
-            Register a New Mountaineer
+            Add New Entry
         </div>
-        <div class="create-mountaineeritem">
-            <div class="create-mountaineeritem-label">Name</div>
-            <input type="text" class="create-mountaineeritem-content" name="name" required/>
+        <div class="create-entryitem">
+            <div class="create-entryitem-label">Name</div>
+            <input type="text" class="create-entryitem-content" name="name" required/>
         </div>
-        <div class="create-mountaineeritem">
-            <div class="create-mountaineeritem-label">Age</div>
-            <input type="number" min="1" class="create-mountaineeritem-content" name="age" required/>
+        <div class="create-entryitem">
+            <div class="create-entryitem-label">Telephone number</div>
+            <input type="number" class="create-entryitem-content" name="telephoneNumber" required/>
         </div>
-        <div class="create-mountaineeritem">
-            <div class="create-mountaineeritem-label">Gender</div>
-            <div class="gender-select">
-                <div class="radio-div">
-                    <input class="radio-input" type="radio" name="gender" value="Male" id="male" checked>
-                    <label class="radio-label" for="male">Male</label>
-                </div>
-                <div class="radio-div">
-                    <input class="radio-input" type="radio" name="gender" value="Female" id="female">
-                    <label class="radio-label" for="female">Female</label>
-                </div>
-            </div>
-        </div>
-        <div class="create-mountaineeritem">
-            <div class="create-mountaineeritem-label">Last Seen Date</div>
-            <input type="date" class="create-mountaineeritem-content" name="lastSeenDate" required/>
+        <div class="create-entryitem">
+            <div class="create-entryitem-label">Email address</div>
+            <input type="email" class="create-entryitem-content" name="emailAddress" required/>
         </div>
 
         <div class="create-button-holder">
-            <button type="submit" class="button">Register Mountaineer</button>
+            <button type="submit" class="button">Add contact</button>
             <a type="button" href="/" class="button">Back</a>
         </div>
     </form>
